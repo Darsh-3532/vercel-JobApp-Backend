@@ -11,6 +11,11 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK' });
 });
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('Job App API is running successfully!');
+});
+
 // Import Routes
 const authRoutes = require('./features/auth/auth.routes');
 const jobsRoutes = require('./features/jobs/jobs.routes');
